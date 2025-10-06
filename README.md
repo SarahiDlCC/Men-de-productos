@@ -10,5 +10,6 @@ Ambos emplean un **bucle (`while` o `do-while`)** para mantener visible el menú
 
 ## Datos
 Nombre: Sarahi De la cruz Cortes
+
 Matrícula: S25018114
 

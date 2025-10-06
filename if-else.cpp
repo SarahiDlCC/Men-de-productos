@@ -6,25 +6,22 @@ int main() {
     bool continuar = true;
 
     while (continuar) {
-        cout << "==== Menú ====\n";
-        cout << "1) Torta\n";
-        cout << "2) Palomitas\n";
-        cout << "3) Agua\n";
-        cout << "4) Salir\n";
-        cout << "Selecciona el producto: ";
+        cout << "==== Menú ====" << endl;
+        cout << "1) Torta" << endl;
+        cout << "2) Palomitas" << endl;
+        cout << "3) Agua" << endl;
+        cout << "4) Salir" << endl;
+        cout << "Opción: ";
         cin >> opcion;
 
         if (opcion == 1) {
-            cout << "Torta: $25\n\n";
+            cout << "Torta: $45" << endl;
         } else if (opcion == 2) {
-            cout << "Palomitas: $10\n\n";
+            cout << "Palomitas: $10" << endl;
         } else if (opcion == 3) {
-            cout << "Agua: $8\n\n";
-        } else if (opcion == 4) {
-            cout << "Saliendo del menú...\n";
-            continuar = false;
+            cout << "Agua 600ml: $15" << endl;
         } else {
-            cout << "Opción no válida, intenta nuevamente.\n\n";
+            cout << "Opción no válida, selecciona una correcta." << endl;
         }
     }
     return 0;
