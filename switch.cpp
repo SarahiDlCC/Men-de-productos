@@ -2,16 +2,23 @@
 using namespace std;
 
 int main() {
-    int opcion;
+    int opcion = 0;
     do {
 
-        cout << "==== Menú ====" << endl;
+        // Mostrar menú
+        cout << "==== Menú ====\n";
         cout << "1) Torta" << endl;
         cout << "2) Palomitas" << endl;
         cout << "3) Agua" << endl;
         cout << "4) Salir" << endl;
         cout << "Opción: ";
-        cin >> opcion;
+
+        if (!(cin >> opcion)) {
+            cout << "Entrada inválida. Por favor ingresa un número." << endl;
+            cin.clear();
+            cin.ignore(1000, '\n'); 
+            opcion = 0;
+        }
 
         switch (opcion) {
             case 1:
@@ -21,11 +28,16 @@ int main() {
                 cout << "Palomitas: $10" << endl;
                 break;
             case 3:
-                cout << "Agua 600ml: $15" << endl;
+                cout << "Agua: $15" << endl;
+                break;
+            case 4:
+                cout << "Saliendo..." << endl;
                 break;
             default:
-                cout << "Opción no válida, selecciona una correcta." << endl;
+                if (opcion != 0) cout << "Opción no válida, selecciona una correcta." << endl;
         }
+
+        cout << endl;
 
     } while (opcion != 4);
 
